@@ -22,7 +22,7 @@ embedding_path = hf_hub_download(
 with open(combined_path, "r") as f:
     combined_data = json.load(f)
 # Load embeddings
-with open("embedding.json", "r") as f:
+with open(embedding_path, "r") as f:
     chunks = json.load(f)
 
 df = pd.DataFrame(chunks)
