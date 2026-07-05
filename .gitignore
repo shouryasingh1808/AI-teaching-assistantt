@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 .env
 embedding.json
-=======
-embeddings.json
 combined.json
 >>>>>>> 37a5c5f (Rag final)

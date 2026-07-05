@@ -4,7 +4,23 @@ import pandas as pd
 import streamlit as st
 from sentence_transformers import SentenceTransformer
 from groq import Groq
+from huggingface_hub import hf_hub_download
 
+
+combined_path = hf_hub_download(
+    repo_id="Shouryxx12/Rag-ai",
+    filename="combined.json",
+    repo_type="dataset"
+)
+
+embedding_path = hf_hub_download(
+    repo_id="Shouryxx12/Rag-ai",
+    filename="embedding.json",
+    repo_type="dataset"
+)
+
+with open(combined_path, "r") as f:
+    combined_data = json.load(f)
 # Load embeddings
 with open("embedding.json", "r") as f:
     chunks = json.load(f)
